@@ -1,0 +1,20 @@
+name: loquacious
+version: 0.1.0.0
+synopsis: Locale-Sensitive Pretty Printer
+maintainer: Imuli <i@imu.li>
+github: imuli/loquacious
+license: Unlicense
+license-file: UNLICENSE
+category: i18n
+description: Provides types and type classes for generating locale specific pretty printed messages.
+
+ghc-options: -Wall
+
+dependencies:
+  - array ^>= 0.5
+  - base ^>= 4.13
+  - prettyprinter ^>= 1.6
+  - text ^>= 1.2
+
+library:
+  source-dirs: src
