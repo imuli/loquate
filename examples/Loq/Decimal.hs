@@ -1,6 +1,7 @@
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE TypeApplications #-}
 {-
 Decimal renderings.
 -}
@@ -10,10 +11,9 @@ import           Data.Number
 import           Data.Text.Loquacious
 
 data Decimal
-   = Decimal
 
 -- | convert to a double and print that
 instance {-# OVERLAPS #-} Loquacious Decimal Number where
-  loq Decimal (Number r) =
+  loq (Number r) =
     let r' = fromRational r :: Double
-     in loq () r'
+     in loq @() r'

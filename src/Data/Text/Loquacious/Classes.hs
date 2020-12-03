@@ -1,3 +1,4 @@
+{-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE ExistentialQuantification #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {- Module      : Data.Text.Loquacious.Classes
@@ -40,6 +41,6 @@ instance Ann SomeAnn where
 class Typeable t => Loquacious l t where
   -- | The default pretty output.
   --
-  -- For base types this can simply be 'const' 'pretty', perhaps with some
+  -- For base types this can simply be 'pretty', perhaps with some
   -- annotation, but polymorphic types should implement this manually.
-  loq :: l -> t -> Doc SomeAnn
+  loq :: t -> Doc SomeAnn

@@ -2,6 +2,8 @@
 {-# LANGUAGE FlexibleInstances #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
 {-# LANGUAGE OverloadedStrings #-}
+{-# LANGUAGE ScopedTypeVariables #-}
+{-# LANGUAGE TypeApplications #-}
 {-
 A numeric data type rendered in multiple ways.
 -}
@@ -14,4 +16,4 @@ newtype Number = Number Rational
 
 -- | The default instance just passes the buck to the wrapped type.
 instance Loquacious l Number where
-  loq l (Number r) = loq l r
+  loq (Number r) = loq @l r
