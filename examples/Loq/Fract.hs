@@ -10,7 +10,7 @@ module Loq.Fract where
 
 import           Data.Number
 import           Data.Ratio
-import           Data.Text.Loquacious
+import           Text.Loquacious
 
 data Mixed
 data Improper

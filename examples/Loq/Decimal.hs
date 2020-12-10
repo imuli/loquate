@@ -8,7 +8,7 @@ Decimal renderings.
 module Loq.Decimal where
 
 import           Data.Number
-import           Data.Text.Loquacious
+import           Text.Loquacious
 
 data Decimal
 

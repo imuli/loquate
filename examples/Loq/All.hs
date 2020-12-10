@@ -8,9 +8,9 @@ Combined renderings.
 -}
 module Loq.All where
 
-import           Data.Text.Loquacious
 import           Loq.Decimal
 import           Loq.Fract
+import           Text.Loquacious
 
 -- | The top level list of possible locales to render into.
 data NumLocale

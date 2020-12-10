@@ -9,7 +9,7 @@ A numeric data type rendered in multiple ways.
 -}
 module Data.Number where
 
-import           Data.Text.Loquacious
+import           Text.Loquacious
 
 newtype Number = Number Rational
   deriving (Eq, Ord, Read, Show)
