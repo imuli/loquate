@@ -7,10 +7,10 @@
 {-# LANGUAGE TypeOperators #-}
 {-# LANGUAGE UndecidableInstances #-}
 {-# OPTIONS_GHC -Wno-orphans #-}
-{- Module      : Data.Text.Loquacious.Instances
+{- Module      : Text.Loquacious.Instances
    Description : Default Loquacious Instances
 -}
-module Data.Text.Loquacious.Instances
+module Text.Loquacious.Instances
   (
   ) where
 
@@ -25,13 +25,13 @@ import           Data.List.NonEmpty (NonEmpty)
 import           Data.Ratio (Ratio, denominator, numerator)
 import qualified Data.Text as T
 import qualified Data.Text.Lazy as LT
-import           Data.Text.Loquacious.Classes
 import           Data.Text.Prettyprint.Doc (Pretty(..), list, tupled, viaShow, (<+>))
 import           Data.Typeable
 import           Data.Version (Version, showVersion)
 import           Data.Void (Void)
 import           Data.Word (Word16, Word32, Word64, Word8)
 import           Numeric.Natural
+import           Text.Loquacious.Classes
 
 -- misc types
 

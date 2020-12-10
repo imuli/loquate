@@ -1,9 +1,9 @@
-module Data.Text.Loquacious.Helpers
+module Text.Loquacious.Helpers
   ( viaShowS
   ) where
 
-import           Data.Text.Loquacious.Classes
 import           Data.Text.Prettyprint.Doc (Pretty(..))
+import           Text.Loquacious.Classes
 
 viaShowS :: (t -> ShowS) -> t -> Doc a
 viaShowS f = pretty . flip f ""

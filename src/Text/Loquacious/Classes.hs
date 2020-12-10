@@ -1,13 +1,13 @@
 {-# LANGUAGE AllowAmbiguousTypes #-}
 {-# LANGUAGE ExistentialQuantification #-}
 {-# LANGUAGE MultiParamTypeClasses #-}
-{- Module      : Data.Text.Loquacious.Classes
+{- Module      : Text.Loquacious.Classes
    Description : Classes for Locales via Pretty Printer
 
-Typically one would import Data.Text.Loquacious, but importing this module
+Typically one would import Text.Loquacious, but importing this module
 directly allows you to sidestep the default instances.
 -}
-module Data.Text.Loquacious.Classes
+module Text.Loquacious.Classes
   ( Loquacious(..)
   , SomeAnn(..)
   , Ann(..)
