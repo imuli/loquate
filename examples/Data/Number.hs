@@ -9,11 +9,11 @@ A numeric data type rendered in multiple ways.
 -}
 module Data.Number where
 
-import           Text.Loquacious
+import           Text.Loquate
 
 newtype Number = Number Rational
   deriving (Eq, Ord, Read, Show)
 
 -- | The default instance just passes the buck to the wrapped type.
-instance Loquacious l Number where
-  loq (Number r) = loq @l r
+instance Loquate l Number where
+  loq l (Number r) = loq l r

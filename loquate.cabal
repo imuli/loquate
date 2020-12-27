@@ -4,13 +4,13 @@ cabal-version: 2.2
 --
 -- see: https://github.com/sol/hpack
 
-name:           loquacious
-version:        0.2.0.0
+name:           loquate
+version:        0.1.0.0
 synopsis:       Locale-Sensitive Pretty Printer
 description:    Provides types and type classes for generating locale specific pretty printed messages.
 category:       i18n
-homepage:       https://github.com/imuli/loquacious#readme
-bug-reports:    https://github.com/imuli/loquacious/issues
+homepage:       https://github.com/imuli/loquate#readme
+bug-reports:    https://github.com/imuli/loquate/issues
 maintainer:     Imuli <i@imu.li>
 license:        Unlicense
 license-file:   UNLICENSE
@@ -18,17 +18,17 @@ build-type:     Simple
 
 source-repository head
   type: git
-  location: https://github.com/imuli/loquacious
+  location: https://github.com/imuli/loquate
 
 library
   exposed-modules:
-      Text.Loquacious
-      Text.Loquacious.Classes
-      Text.Loquacious.Doc
-      Text.Loquacious.Helpers
-      Text.Loquacious.Instances
+      Text.Loquate
+      Text.Loquate.Class
+      Text.Loquate.Doc
+      Text.Loquate.Helpers
+      Text.Loquate.Instances
   other-modules:
-      Paths_loquacious
+      Paths_loquate
   hs-source-dirs:
       src
   ghc-options: -Wall

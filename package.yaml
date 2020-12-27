@@ -1,8 +1,8 @@
-name: loquacious
-version: 0.2.0.0
+name: loquate
+version: 0.1.0.0
 synopsis: Locale-Sensitive Pretty Printer
 maintainer: Imuli <i@imu.li>
-github: imuli/loquacious
+github: imuli/loquate
 license: Unlicense
 license-file: UNLICENSE
 category: i18n

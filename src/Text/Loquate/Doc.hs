@@ -1,13 +1,14 @@
-{- Module      : Text.Loquacious.Doc
+{- Module      : Text.Loquate.Doc
    Description : Document Creation
 
 This is a partial reexport of Data.Text.Prettyprint.Doc, with only those
-functions related to document creation.
+functions related to document creation, and some extra helper functions.
 -}
-module Text.Loquacious.Doc
+module Text.Loquate.Doc
   ( -- * Document
     Doc
     -- * Basics
+  , fromString
   , viaShowS
   , viaShow
   , unsafeViaShow
@@ -106,5 +107,6 @@ module Text.Loquacious.Doc
   , FusionDepth(..)
   ) where
 
+import           Data.String
 import           Data.Text.Prettyprint.Doc
-import           Text.Loquacious.Helpers
+import           Text.Loquate.Helpers

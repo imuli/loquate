@@ -10,27 +10,27 @@ module Loq.Fract where
 
 import           Data.Number
 import           Data.Ratio
-import           Text.Loquacious
+import           Text.Loquate
 
-data Mixed
-data Improper
+data Fract
+   = Mixed
+   | Improper
 
-instance {-# OVERLAPS #-} Loquacious Mixed Number where
-  loq (Number r) =
+instance {-# OVERLAPS #-} Loquate Fract Number where
+  loq Mixed (Number r) =
     let neg_ = if signum r < 0 then "-" else mempty
         r' = abs r
         numer = numerator r'
         denom = denominator r'
         lead = numer `div` denom
         numer' = numer - lead * denom
-        lead_ = if lead /= 0 || numer' == 0 then loq @() lead else mempty
+        lead_ = if lead /= 0 || numer' == 0 then loq () lead else mempty
         sep_ = if lead /= 0 && numer' /= 0 then "-" else mempty
-        frac_ = if numer' /= 0 then loq @() numer' <> "/" <> loq @() denom else mempty
+        frac_ = if numer' /= 0 then loq () numer' <> "/" <> loq () denom else mempty
      in neg_ <> lead_ <> sep_ <> frac_
-instance {-# OVERLAPS #-} Loquacious Improper Number where
-  loq (Number r) =
+  loq Improper (Number r) =
     let neg = if signum r < 0 then "-" else mempty
         r' = abs r
         numer = numerator r'
         denom = denominator r'
-     in neg <> loq @() numer <> "/" <> loq @() denom
+     in neg <> loq () numer <> "/" <> loq () denom

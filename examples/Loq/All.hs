@@ -10,17 +10,14 @@ module Loq.All where
 
 import           Loq.Decimal
 import           Loq.Fract
-import           Text.Loquacious
+import           Text.Loquate
 
 -- | The top level list of possible locales to render into.
 data NumLocale
-   = Mixed
-   | Improper
-   | Decimal
+   = Fract Fract
+   | Dec Decimal
 
 -- | given one of our languages, render some value.
-loquate :: (Loquacious Improper t, Loquacious Mixed t, Loquacious Decimal t) =>
-  NumLocale -> t -> Doc SomeAnn
-loquate Decimal  = loq @Decimal
-loquate Improper = loq @Improper
-loquate Mixed    = loq @Mixed
+loquate :: (Loquate Decimal t, Loquate Fract t) => NumLocale -> t -> Doq
+loquate (Dec l)   = loq l
+loquate (Fract l) = loq l
