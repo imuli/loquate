@@ -13,6 +13,7 @@ ghc-options: -Wall
 dependencies:
   - array ^>= 0.5
   - base ^>= 4.13
+  - data-default-class ^>= 0.1
   - prettyprinter ^>= 1.6
   - text ^>= 1.2
 
